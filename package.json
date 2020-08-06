@@ -1,0 +1,37 @@
+{
+    "name": "fluid-scrapy",
+    "version": "1.0.0",
+    "description": "Tools for scraping HTML content into regular structures such as CSV and JSON",
+    "main": "index.js",
+    "nyc": {
+        "exclude": [
+            "node_modules/**",
+            "tests/**"
+        ]
+    },
+    "scripts": {
+        "pretest": "node node_modules/rimraf/bin.js coverage/* reports/* instrumented/*",
+        "test": "node node_modules/nyc/bin/nyc.js node tests/all-tests.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/amb26/fluid-scrapy.git"
+    },
+    "license": "BSD-3-Clause",
+    "bugs": {
+        "url": "https://https://issues.fluidproject.org/"
+    },
+    "dependencies": {
+        "infusion": "3.0.0-dev.20200728T104627Z.e6aa1a341.FLUID-6145",
+        "kettle": "1.15.1",
+        "cheerio": "0.22.0"
+    },
+    "devDependencies": {
+        "node-jqunit": "1.1.8",
+        "eslint": "7.5.0",
+        "eslint-config-fluid": "1.4.0",
+        "eslint-plugin-markdown": "1.0.2",
+        "fluid-grunt-lint-all": "1.0.8",
+        "grunt": "1.2.1"
+    }
+}
